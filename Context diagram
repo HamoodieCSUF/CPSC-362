@@ -1,1 +1,24 @@
+Actors and Components:
+User: The actor who provides the input and receives the final response.
+User Input: The initial query or prompt provided by the user.
+Prompt Augmentation: The process of improving the user input by retrieving related information from a data source and document chunks.
+Context: Relevant information from the knowledge base to augment the user prompt.
+Embeddings Model: Converts text (user input and document chunks) into embeddings (numerical vectors).
+Embedding: The vector representation of both the user input and the document chunks, used for semantic comparison.
+Semantic Search: A search mechanism that uses embeddings to find relevant document chunks from a vector store.
+Vector Store: A storage mechanism for document embeddings that allows quick retrieval based on similarity to the user input embedding.
+Document Chunks: Segments of information from the data source, converted to embeddings for storage and search.
+Large Language Model (LLM): The model used for generating text, which produces the final response using the augmented prompt.
+Text Generation Workflow: The flow that handles the retrieval of document chunks and response generation using the LLM.
+Data Ingestion Workflow: The process that ingests and prepares document chunks from a data source into the system (embedding, storage in vector store).
 
+Flow of Data:
+User provides a User Input (query or prompt) to the system.
+Embeddings Model converts the User Input into an Embedding.
+The Embedding is sent to the Semantic Search, which looks for relevant Document Chunks in the Vector Store.
+The Document Chunks are retrieved based on the similarity between the user’s input embedding and document embeddings.
+Prompt Augmentation happens as the Document Chunks provide additional Context to the user input.
+The augmented prompt is then processed by the Large Language Model in the Text Generation Workflow.
+The Large Language Model generates the final Response using the augmented prompt.
+The Response is sent back to the User.
+The Data Ingestion Workflow continually updates the Vector Store with new Document Chunks from a Data Source using the Embeddings Model to create Embeddings

@@ -1,15 +1,27 @@
 Actors and Components:
+
 User: The actor who provides the input and receives the final response.
+
 User Input: The initial query or prompt provided by the user.
+
 Prompt Augmentation: The process of improving the user input by retrieving related information from a data source and document chunks.
+
 Context: Relevant information from the knowledge base to augment the user prompt.
+
 Embeddings Model: Converts text (user input and document chunks) into embeddings (numerical vectors).
+
 Embedding: The vector representation of both the user input and the document chunks, used for semantic comparison.
+
 Semantic Search: A search mechanism that uses embeddings to find relevant document chunks from a vector store.
+
 Vector Store: A storage mechanism for document embeddings that allows quick retrieval based on similarity to the user input embedding.
+
 Document Chunks: Segments of information from the data source, converted to embeddings for storage and search.
+
 Large Language Model (LLM): The model used for generating text, which produces the final response using the augmented prompt.
+
 Text Generation Workflow: The flow that handles the retrieval of document chunks and response generation using the LLM.
+
 Data Ingestion Workflow: The process that ingests and prepares document chunks from a data source into the system (embedding, storage in vector store).
 
 Flow of Data:

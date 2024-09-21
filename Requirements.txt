@@ -47,4 +47,9 @@ Non-Core Features we can consider:
   Or we can go more in depths and put color themes for people to choose from.
   People should be able to change how large the text is, and what font it is.
 
+2. Brand
+  Need to decide on a name for our app
+  Decide on what logo it should have
+  What colorway it should be in
+  Slogan
         

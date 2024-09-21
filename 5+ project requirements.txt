@@ -1,0 +1,59 @@
+Project Requirements (Functional and Non-Functional)
+Functional Requirements
+1. User Authentication
+Use Case:
+Name: User Registration and Login
+Actor: User
+Description: Users can create an account by registering with an email and password. Once registered, users can log in using their credentials.
+Precondition: The user is not already registered in the system.
+Postcondition: The user is registered in the system, or logged in successfully.
+User Story:
+As a new user, I want to create an account so that I can access the chat application.
+As a registered user, I want to log in with my credentials so that I can access my account and start using the chat.
+2. Messaging
+Use Case:
+Name: Send and Receive Messages
+Actor: User
+Description: Users can send and receive messages in real-time between private or group chats.
+Precondition: The user is logged in and is part of the chat room.
+Postcondition: The message is sent and delivered to all chat participants in real-time.
+User Story:
+As a user, I want to send and receive messages so that I can communicate with others in real-time.
+3. Group Management
+Use Case:
+Name: Create and Manage Groups
+Actor: User
+Description: Users can create, join, and leave groups. Group owners can manage group settings and permissions.
+Precondition: The user is logged in and has the necessary permissions.
+Postcondition: The group is created, and users can join and communicate within it.
+User Story:
+As a group creator, I want to manage group settings so that I can control who joins and what permissions they have.
+4. Notifications
+Use Case:
+Name: Send Notifications
+Actor: System
+Description: The system sends notifications to users when they receive a new message or when someone joins a group they are in.
+Precondition: The user is logged in and has notifications enabled.
+Postcondition: The user is notified of the new message or event in real-time.
+User Story:
+As a user, I want to receive notifications so that I am aware of new messages and updates in my chat rooms.
+5. File Sharing
+Use Case:
+Name: Share Files
+Actor: User
+Description: Users can share files such as images, documents, and gifs within chat rooms.
+Precondition: The user is logged in and part of the chat room.
+Postcondition: The file is shared and delivered to all chat participants.
+User Story:
+As a user, I want to share files in chat so that I can send images or documents to other participants.
+Non-Functional Requirements
+1. Performance
+The system must support up to 100 simultaneous users without causing delays in message delivery.
+2. Security
+User data, including messages and files, must be encrypted during transmission and storage.
+3. Availability
+The chat application should maintain a 99.9% uptime to ensure users can access it almost always.
+4. Usability
+The interface must be intuitive and easy to navigate for both technical and non-technical users, allowing quick access to all core features.
+5. Scalability
+The system should be scalable to handle future growth, including more users, larger groups, and increased file-sharing capacity.

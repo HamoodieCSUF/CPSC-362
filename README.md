@@ -5,5 +5,5 @@ People in this project:
 Yuchen Chung,
 Muhammad Jibaly,
 Marco Luna,
-Elias Zoreikat 
+and Elias Zoreikat 
 

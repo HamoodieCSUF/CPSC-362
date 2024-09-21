@@ -2,8 +2,8 @@
 Group project which we make a app that we can send and receive messages from multiple people.
 
 People in this project: 
-Yuchen Chung
-Muhammad Jibaly 
-Marco Luna 
+Yuchen Chung,
+Muhammad Jibaly,
+Marco Luna,
 Elias Zoreikat 
 

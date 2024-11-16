@@ -1,5 +1,6 @@
 Project Requirements (Functional and Non-Functional)
 Functional Requirements
+
 1. User Authentication
 Use Case:
 Name: User Registration and Login
@@ -53,6 +54,7 @@ As a user, I want to share files in chat so that I can send images or documents 
 
 
 Non-Functional Requirements -OPTIONAL DO IF EXTRA TIME-
+
 1. Performance
 The system must support up to 100 simultaneous users without causing delays in message delivery.
 2. Security

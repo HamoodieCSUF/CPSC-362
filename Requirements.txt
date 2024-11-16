@@ -10,6 +10,7 @@ Postcondition: The user is registered in the system, or logged in successfully.
 User Story:
 As a new user, I want to create an account so that I can access the chat application.
 As a registered user, I want to log in with my credentials so that I can access my account and start using the chat.
+
 2. Messaging
 Use Case:
 Name: Send and Receive Messages
@@ -19,6 +20,7 @@ Precondition: The user is logged in and is part of the chat room.
 Postcondition: The message is sent and delivered to all chat participants in real-time.
 User Story:
 As a user, I want to send and receive messages so that I can communicate with others in real-time.
+
 3. Group Management
 Use Case:
 Name: Create and Manage Groups
@@ -28,6 +30,7 @@ Precondition: The user is logged in and has the necessary permissions.
 Postcondition: The group is created, and users can join and communicate within it.
 User Story:
 As a group creator, I want to manage group settings so that I can control who joins and what permissions they have.
+
 4. Notifications
 Use Case:
 Name: Send Notifications
@@ -37,6 +40,7 @@ Precondition: The user is logged in and has notifications enabled.
 Postcondition: The user is notified of the new message or event in real-time.
 User Story:
 As a user, I want to receive notifications so that I am aware of new messages and updates in my chat rooms.
+
 5. File Sharing
 Use Case:
 Name: Share Files

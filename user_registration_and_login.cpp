@@ -5,7 +5,6 @@ using namespace std;
 
 // Dictionary to store user information
 unordered_map<string, string> user_database;
-
 // Function for user registration
 void register_user(const string& username, const string& password) {
     if (user_database.find(username) != user_database.end()) {

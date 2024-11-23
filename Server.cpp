@@ -5,7 +5,8 @@
 #include <mutex>
 #include <winsock2.h>
 #include <ws2tcpip.h>
-#include "user_registration_and_login.cpp" // Include the user registration and login file
+#include "GroupManager.h" // Include group management
+#include "user_registration_and_login.cpp" // Include user registration and login
 
 #pragma comment(lib, "ws2_32.lib") // Link Winsock library
 
@@ -13,6 +14,7 @@ using namespace std;
 
 vector<SOCKET> clients;  // List of connected client sockets
 mutex client_mutex;      // Mutex for thread safety
+GroupManager groupManager; // Instantiate GroupManager
 
 // Broadcast message to all connected clients
 void broadcast_message(const string& message, SOCKET sender) {
@@ -25,26 +27,25 @@ void broadcast_message(const string& message, SOCKET sender) {
 }
 
 // Authenticate the client (registration or login)
-bool authenticate_client(SOCKET client_socket) {
+bool authenticate_client(SOCKET client_socket, string& username) {
     char buffer[1024];
     send(client_socket, "1. Register\n2. Login\nChoose an option: ", 40, 0);
 
     recv(client_socket, buffer, sizeof(buffer) - 1, 0);
     int option = atoi(buffer);
 
-    string username, password;
     send(client_socket, "Enter username: ", 17, 0);
     recv(client_socket, buffer, sizeof(buffer) - 1, 0);
     username = string(buffer).substr(0, string(buffer).find('\n'));
 
     send(client_socket, "Enter password: ", 17, 0);
     recv(client_socket, buffer, sizeof(buffer) - 1, 0);
-    password = string(buffer).substr(0, string(buffer).find('\n'));
+    string password = string(buffer).substr(0, string(buffer).find('\n'));
 
     if (option == 1) {
         register_user(username, password);
         send(client_socket, "Registration successful! Please log in.\n", 40, 0);
-        return authenticate_client(client_socket);
+        return authenticate_client(client_socket, username);
     } else if (option == 2) {
         if (user_database.find(username) != user_database.end() && user_database[username] == password) {
             send(client_socket, "Login successful!\n", 19, 0);
@@ -59,9 +60,69 @@ bool authenticate_client(SOCKET client_socket) {
     }
 }
 
+// Handle group commands
+void handle_group_commands(SOCKET client_socket, const string& username) {
+    char buffer[1024];
+    while (true) {
+        send(client_socket, "Group Commands:\n1. Create Group\n2. Join Group\n3. Leave Group\n4. List Groups\n5. Delete Group\n6. Back to Chat\nChoose an option: ", 120, 0);
+        recv(client_socket, buffer, sizeof(buffer) - 1, 0);
+        int option = atoi(buffer);
+
+        if (option == 1) {
+            send(client_socket, "Enter group name: ", 19, 0);
+            recv(client_socket, buffer, sizeof(buffer) - 1, 0);
+            string groupName(buffer);
+            if (groupManager.createGroup(groupName, username)) {
+                send(client_socket, "Group created successfully.\n", 28, 0);
+            } else {
+                send(client_socket, "Group creation failed (already exists).\n", 41, 0);
+            }
+        } else if (option == 2) {
+            send(client_socket, "Enter group name: ", 19, 0);
+            recv(client_socket, buffer, sizeof(buffer) - 1, 0);
+            string groupName(buffer);
+            if (groupManager.joinGroup(groupName, username)) {
+                send(client_socket, "Joined group successfully.\n", 27, 0);
+            } else {
+                send(client_socket, "Group does not exist.\n", 23, 0);
+            }
+        } else if (option == 3) {
+            send(client_socket, "Enter group name: ", 19, 0);
+            recv(client_socket, buffer, sizeof(buffer) - 1, 0);
+            string groupName(buffer);
+            if (groupManager.leaveGroup(groupName, username)) {
+                send(client_socket, "Left group successfully.\n", 26, 0);
+            } else {
+                send(client_socket, "Group does not exist or you are not a member.\n", 45, 0);
+            }
+        } else if (option == 4) {
+            vector<string> groups = groupManager.listGroups();
+            string response = "Available Groups:\n";
+            for (const string& group : groups) {
+                response += group + "\n";
+            }
+            send(client_socket, response.c_str(), response.size(), 0);
+        } else if (option == 5) {
+            send(client_socket, "Enter group name: ", 19, 0);
+            recv(client_socket, buffer, sizeof(buffer) - 1, 0);
+            string groupName(buffer);
+            if (groupManager.deleteGroup(groupName, username)) {
+                send(client_socket, "Group deleted successfully.\n", 29, 0);
+            } else {
+                send(client_socket, "Failed to delete group (not owner or does not exist).\n", 53, 0);
+            }
+        } else if (option == 6) {
+            break; // Exit group commands
+        } else {
+            send(client_socket, "Invalid option.\n", 17, 0);
+        }
+    }
+}
+
 // Handle individual client
 void handle_client(SOCKET client_socket) {
-    if (!authenticate_client(client_socket)) {
+    string username;
+    if (!authenticate_client(client_socket, username)) {
         closesocket(client_socket);
         return;
     }
@@ -84,10 +145,13 @@ void handle_client(SOCKET client_socket) {
 
         buffer[bytes_received] = '\0'; // Null-terminate the message
         string message = string(buffer);
-        cout << "Message received: " << message << endl;
 
-        // Broadcast the message to other clients
-        broadcast_message(message, client_socket);
+        if (message == "/groups") {
+            handle_group_commands(client_socket, username);
+        } else {
+            cout << "Message received: " << message << endl;
+            broadcast_message(message, client_socket);
+        }
     }
 }
 

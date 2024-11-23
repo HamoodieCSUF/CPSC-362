@@ -5,11 +5,14 @@
 #include <mutex>
 #include <winsock2.h>
 #include <ws2tcpip.h>
+#include "user_registration_and_login.cpp" // Include the user registration and login file
+
 #pragma comment(lib, "ws2_32.lib") // Link Winsock library
+
 using namespace std;
 
-vector<SOCKET> clients; // List of connected client sockets
-mutex client_mutex;     // Mutex for thread safety
+vector<SOCKET> clients;  // List of connected client sockets
+mutex client_mutex;      // Mutex for thread safety
 
 // Broadcast message to all connected clients
 void broadcast_message(const string& message, SOCKET sender) {
@@ -21,8 +24,53 @@ void broadcast_message(const string& message, SOCKET sender) {
     }
 }
 
+// Authenticate the client (registration or login)
+bool authenticate_client(SOCKET client_socket) {
+    char buffer[1024];
+    send(client_socket, "1. Register\n2. Login\nChoose an option: ", 40, 0);
+
+    recv(client_socket, buffer, sizeof(buffer) - 1, 0);
+    int option = atoi(buffer);
+
+    string username, password;
+    send(client_socket, "Enter username: ", 17, 0);
+    recv(client_socket, buffer, sizeof(buffer) - 1, 0);
+    username = string(buffer).substr(0, string(buffer).find('\n'));
+
+    send(client_socket, "Enter password: ", 17, 0);
+    recv(client_socket, buffer, sizeof(buffer) - 1, 0);
+    password = string(buffer).substr(0, string(buffer).find('\n'));
+
+    if (option == 1) {
+        register_user(username, password);
+        send(client_socket, "Registration successful! Please log in.\n", 40, 0);
+        return authenticate_client(client_socket);
+    } else if (option == 2) {
+        if (user_database.find(username) != user_database.end() && user_database[username] == password) {
+            send(client_socket, "Login successful!\n", 19, 0);
+            return true;
+        } else {
+            send(client_socket, "Login failed. Disconnecting.\n", 29, 0);
+            return false;
+        }
+    } else {
+        send(client_socket, "Invalid option. Disconnecting.\n", 31, 0);
+        return false;
+    }
+}
+
 // Handle individual client
 void handle_client(SOCKET client_socket) {
+    if (!authenticate_client(client_socket)) {
+        closesocket(client_socket);
+        return;
+    }
+
+    {
+        lock_guard<mutex> guard(client_mutex);
+        clients.push_back(client_socket);
+    }
+
     char buffer[1024];
     while (true) {
         int bytes_received = recv(client_socket, buffer, sizeof(buffer) - 1, 0);
@@ -89,10 +137,6 @@ int main() {
         }
 
         cout << "New client connected: " << client_socket << endl;
-        {
-            lock_guard<mutex> guard(client_mutex);
-            clients.push_back(client_socket);
-        }
 
         // Start a new thread to handle the client
         thread(handle_client, client_socket).detach();

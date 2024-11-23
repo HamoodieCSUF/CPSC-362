@@ -4,6 +4,7 @@
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #pragma comment(lib, "ws2_32.lib") // Link Winsock library
+
 using namespace std;
 
 // Function to handle incoming messages from the server
@@ -72,3 +73,4 @@ int main() {
     WSACleanup();
     return 0;
 }
+

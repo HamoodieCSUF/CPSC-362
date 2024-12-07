@@ -7,11 +7,8 @@
 
 
 ## Muhammad Jibaly
-
 ## Elias Zoreikat
-
 ## Yu-Chen Chung
-
 ## Marco Luna
 
 Website link:

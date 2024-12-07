@@ -60,7 +60,7 @@ Allows users to select emojis in their messages.
 ## **Timeago.js:**
 
 
-# **Time Formatting:**
+# Time Formatting:
 
 Formats timestamps in a human-readable format.
 
@@ -68,10 +68,10 @@ Formats timestamps in a human-readable format.
 ## **HTML and CSS:**
 
 
-# **HTML: **
+# HTML: 
 
 Provides the structure of your application.
 
-# **CSS: **
+# CSS: 
 
 Provides the styling for your application.

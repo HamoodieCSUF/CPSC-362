@@ -1,7 +1,7 @@
-**Here are the main components of the  backend for this project:**
+###**Here are the main components of the  backend for this project:**
 
 
-**Firebase Firestore:**
+##**Firebase Firestore:**
 
 
 Database: Firestore will be your primary database for storing and retrieving data.
@@ -17,7 +17,7 @@ Firestore Queries: Use Firestore queries to fetch data from the database.
 Firestore Document Updates: Use Firestore to update documents in the database.
 
 
-**Middleware:**
+##**Middleware:**
 
 
 Firebase Functions: You can use Firebase Cloud Functions to handle server-side logic, such as processing data before saving it to Firestore or sending notifications.
@@ -26,7 +26,7 @@ State Management:
 Zustand: Use Zustand for managing application state, such as user data and chat state.
 
 
-**Utilities:**
+##**Utilities:**
 
 
 Emoji Picker: Use the Emoji Picker component to allow users to select emojis.
@@ -34,13 +34,13 @@ Emoji Picker: Use the Emoji Picker component to allow users to select emojis.
 Timeago.js: Use Timeago.js to format timestamps in a human-readable format.
 
 
-**React Components:**
+##**React Components:**
 
 
 Chat Component: The main component for handling chat functionality, including displaying messages, sending messages, and handling user interactions.
 
 
-**Here is a brief overview of how these components fit together in the project:**
+##**Here is a brief overview of how these components fit together in the project:**
 
 
 Firestore: Store and retrieve chat messages, user data, and other relevant information.

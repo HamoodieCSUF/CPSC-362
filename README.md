@@ -1,16 +1,20 @@
-**#CPSC 362**
+# CPSC 362
 
-Group Messaging Project** 
 
-Made by:
+## Group Messaging Project** 
 
-Muhammad Jibaly
 
-Elias Zoreikat
+### Made by:
 
-Yu-Chen Chung
 
-Marco Luna
+
+## Muhammad Jibaly
+
+## Elias Zoreikat
+
+## Yu-Chen Chung
+
+## Marco Luna
 
 Website link:
 

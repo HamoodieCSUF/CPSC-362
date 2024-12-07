@@ -16,77 +16,85 @@ Made by:
 
 
 
-## Website link:
+### Website link:
 
 https://stunning-snickerdoodle-0520b2.netlify.app
 
-## Youtube Explanatation Video:
+### Youtube Explanatation Video:
 
 https://youtu.be/CJcz2T6Z48o
 
 
-Important info:
+# Important info:
 
-Languages & Core Technologies:
 
-JavaScript/JSX - Primary programming language
-React - Frontend framework
-CSS - Styling
+## Languages & Core Technologies:
 
-Libraries & Dependencies:
 
-Firebase/Firestore - Backend & real-time database
+### JavaScript/JSX - Primary programming language
 
-Authentication
+### React - Frontend framework
 
-Document storage
+### CSS - Styling
 
-Real-time updates (onSnapshot)
 
-React Router (useNavigate) - Navigation
+## Libraries & Dependencies:
 
-EmojiPicker - Emoji selection interface
 
-timeago.js - Time formatting
+### Firebase/Firestore - Backend & real-time database
 
-Zustand (useUserStore) - State management
+### Authentication
 
-Key Features & Implementation:
+### Document storage
 
-Real-time messaging
+### Real-time updates (onSnapshot)
 
-Group chat functionality
+### React Router (useNavigate) - Navigation
 
-Image upload/sharing
+### EmojiPicker - Emoji selection interface
 
-User profiles
+### timeago.js - Time formatting
 
-Group management
+### Zustand (useUserStore) - State management
 
-Message formatting (URL detection/linkify)
 
-Emoji support
+## Key Features & Implementation:
 
-File upload preview
 
-User presence system
+### Real-time messaging
 
-Development Tools & Patterns:
+### Group chat functionality
 
-React Hooks (useState, useEffect)
+### Image upload/sharing
 
-Component-based architecture
+### User profiles
 
-Async/await patterns
+### Group management
 
-Event handling
+### Message formatting (URL detection/linkify)
 
-File handling (FileReader API)
+### Emoji support
 
-Modal dialogs
+### File upload preview
 
-Responsive design
+### User presence system
 
-Deployment:
+### Development Tools & Patterns:
 
-Netlify
+R### eact Hooks (useState, useEffect)
+
+### Component-based architecture
+
+### Async/await patterns
+
+### Event handling
+
+### File handling (FileReader API)
+
+### Modal dialogs
+
+### Responsive design
+
+## Deployment:
+
+### Netlify

@@ -4,53 +4,88 @@
 ## **Firebase Firestore:**
 
 
-Database: Firestore will be your primary database for storing and retrieving data.
+### Database: 
 
-Authentication: Firebase Authentication can be used to manage user authentication and authorization.
+Firestore will be your primary database for storing and retrieving data.
 
-Real-time Updates: Firestore provides real-time updates to keep your application data in sync.
+### Authentication: 
+
+Firebase Authentication can be used to manage user authentication and authorization.
+
+### Real-time Updates: 
+
+Firestore provides real-time updates to keep your application data in sync.
 
 ## API Endpoints:
 
-Firestore Queries: Use Firestore queries to fetch data from the database.
+### Firestore Queries: 
 
-Firestore Document Updates: Use Firestore to update documents in the database.
+Use Firestore queries to fetch data from the database.
+
+### Firestore Document Updates: 
+
+Use Firestore to update documents in the database.
 
 
 ## Middleware:
 
 
-Firebase Functions: You can use Firebase Cloud Functions to handle server-side logic, such as processing data before saving it to Firestore or sending notifications.
-State Management:
+### Firebase Functions:
 
-Zustand: Use Zustand for managing application state, such as user data and chat state.
+You can use Firebase Cloud Functions to handle server-side logic, such as processing data before saving it to Firestore or sending notifications.
+
+
+## State Management:
+
+
+### Zustand:
+
+Use Zustand for managing application state, such as user data and chat state.
 
 
 ## Utilities:
 
 
-Emoji Picker: Use the Emoji Picker component to allow users to select emojis.
+### Emoji Picker: 
 
-Timeago.js: Use Timeago.js to format timestamps in a human-readable format.
+Use the Emoji Picker component to allow users to select emojis.
+
+### Timeago.js: 
+
+Use Timeago.js to format timestamps in a human-readable format.
 
 
 ## React Components:
 
 
-Chat Component: The main component for handling chat functionality, including displaying messages, sending messages, and handling user interactions.
+### Chat Component: 
+
+The main component for handling chat functionality, including displaying messages, sending messages, and handling user interactions.
 
 
 ## Here is a brief overview of how these components fit together in the project:
 
 
-Firestore: Store and retrieve chat messages, user data, and other relevant information.
+### Firestore: 
 
-Firebase Authentication: Manage user authentication and authorization.
+Store and retrieve chat messages, user data, and other relevant information.
 
-Zustand: Manage application state, such as the current user and chat state.
+### Firebase Authentication: 
 
-React Components: Build the user interface for your chat application, including the Chat component.
+Manage user authentication and authorization.
 
-Emoji Picker: Allow users to select emojis in their messages.
+### Zustand: 
 
-Timeago.js: Format timestamps in a human-readable format.
+Manage application state, such as the current user and chat state.
+
+### React Components: 
+
+Build the user interface for your chat application, including the Chat component.
+
+### Emoji Picker: 
+
+Allow users to select emojis in their messages.
+
+### Timeago.js: 
+
+Format timestamps in a human-readable format.

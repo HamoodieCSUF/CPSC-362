@@ -1,7 +1,7 @@
 # **Here are the main components of our frontend:**
 
 
-## **React Components:**
+## React Components:
 
 
 ### Chat Component: 

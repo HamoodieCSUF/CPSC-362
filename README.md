@@ -81,7 +81,7 @@ https://youtu.be/CJcz2T6Z48o
 
 ### Development Tools & Patterns:
 
-R### eact Hooks (useState, useEffect)
+### React Hooks (useState, useEffect)
 
 ### Component-based architecture
 

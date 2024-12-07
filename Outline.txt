@@ -1,0 +1,51 @@
+Core Features:
+
+1.  User Authentication
+  We first need a login page/background with which we would ask them for their emails and passwords or ask them to make an account.
+  If they dint have an account we should link them to a page where they can create a username, add a profile picture, and give a tutorial on how to use our app.
+
+2. Messaging
+  We are gonna need private message rooms between 2 people
+  We also need group message rooms where multiple people can join and send and recieve messages
+  Emojis, gifs, and screenshots/pictures should all be able to be sent and recieved through these rooms.
+  A person should be able to tell if their message was sent to the recipient, and read by them.
+
+3. Groups
+  Branching off what we said about groups, we should be able to create, leave, and join groups.
+  When someone creates a group they should be given a tutorial on how to personalize their server, and also add permissions on it.
+
+4. Notifications
+  People should know if someone has sent a message, and should be able to customize which servers they get a notifiation from.
+  When the sender is typing a message, the reciever should be able to see this, but it shouldn't show if the user has been AFK (away from keyboard)
+
+5.Filtering
+  People should be able to search through their message history
+  It should be able to be filtered by date, sender, and media.
+
+6.Profiles
+  Just like discord we should have statuses:
+      Offline, Online, DND, and Away
+  User descriptions should be available on a person's profile when you click on them.
+
+7. Friends
+  Users should be able to add their friends to message them or invite them to a group.
+  Adding their friends should be a simple process where we link each account with a designated username, with which someone can type in and add a person directly.
+
+8. Server Security
+  Owners/Creators of servers should be able to kick/ban/timeout people from their server, and also give people permission to do it to others as well
+  Custom roles for specific people should also be able to be handed out and customized.
+
+9. App Safety
+  There should be a report feature for toxic users, hackers, or spam accounts who have gotten multiple reports from various users.
+
+10.Customization
+  We can add simple stuff like dark mode and light mode for our app.
+  Or we can go more in depths and put color themes for people to choose from.
+  People should be able to change how large the text is, and what font it is.
+
+11. Brand
+  Need to decide on a name for our app
+  Decide on what logo it should have
+  What colorway it should be in
+  Slogan
+        

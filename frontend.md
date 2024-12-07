@@ -16,62 +16,62 @@ Depending on your application, you might have other components like Login, Regis
 ## State Management:
 
 
-# **Zustand:**
+### Zustand:
 
 Used for managing global state across your application, such as user data and chat state.
 
 
-## **Routing:**
+## Routing:
 
 
-# *React Router: *
+### React Router: 
 
 Manages navigation and routing within your application.
 
 
-## **Firebase Firestore:**
+## Firebase Firestore:
 
 
-# **Database: **
+### Database: 
 
 Stores and retrieves data.
 
-# **Real-time Updates: **
+### Real-time Updates: 
 
 Keeps your application data in sync with Firestore.
 
 
-## **Firebase Authentication:**
+## Firebase Authentication:
 
 
-# **User Authentication: **
+### User Authentication: 
 
 Manages user authentication and authorization.
 
 
-## **Emoji Picker:**
+## Emoji Picker:
 
 
-# **Emoji Selection: **
+### Emoji Selection: 
 
 Allows users to select emojis in their messages.
 
 
-## **Timeago.js:**
+## Timeago.js:
 
 
-# Time Formatting:
+### Time Formatting:
 
 Formats timestamps in a human-readable format.
 
 
-## **HTML and CSS:**
+## HTML and CSS:
 
 
-# HTML: 
+### HTML: 
 
 Provides the structure of your application.
 
-# CSS: 
+### CSS: 
 
 Provides the styling for your application.

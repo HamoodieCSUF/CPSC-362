@@ -6,13 +6,13 @@
 
 Made by:
 
-**Muhammad Jibaly**
+### Muhammad Jibaly
 
-**Elias Zoreikat**
+### Elias Zoreikat
 
-**Yu-Chen Chung**
+### Yu-Chen Chung
 
-**Marco Luna**
+### Marco Luna
 
 
 

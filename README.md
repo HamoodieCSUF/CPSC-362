@@ -91,7 +91,7 @@ https://youtu.be/CJcz2T6Z48o
 
 ### File handling (FileReader API)
 
-### Modal dialogs
+### Model dialogs
 
 ### Responsive design
 

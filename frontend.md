@@ -1,19 +1,19 @@
-### **Here are the main components of our frontend:**
+# **Here are the main components of our frontend:**
 
 
 ## **React Components:**
 
 
-# **Chat Component: ** 
+### Chat Component: 
 
 Handles the chat functionality, including displaying messages, sending messages, and handling user interactions.
 
-# **Other Components: **
+### Other Components: 
 
 Depending on your application, you might have other components like Login, Register, Profile, etc.
 
 
-## **State Management:**
+## State Management:
 
 
 # **Zustand:**

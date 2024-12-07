@@ -1,8 +1,6 @@
 # CPSC 362
 
-
-# Group Messaging Project** 
-
+# Group Messaging Project
 
 ### Made by:
 

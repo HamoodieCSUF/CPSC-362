@@ -57,7 +57,7 @@ Manages user authentication and authorization.
 Allows users to select emojis in their messages.
 
 
-## Timeago.js:
+### Timeago.js:
 
 
 ### Time Formatting:

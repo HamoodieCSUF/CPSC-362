@@ -57,7 +57,7 @@ Manages user authentication and authorization.
 Allows users to select emojis in their messages.
 
 
-## Timeago.js:
+### Timeago.js:
 
 
 ### Time Formatting:
@@ -75,3 +75,9 @@ Provides the structure of your application.
 ### CSS: 
 
 Provides the styling for your application.
+
+## Vite:
+
+### Our main build tool for the frontend of the project.
+
+

@@ -35,6 +35,8 @@ https://youtu.be/CJcz2T6Z48o
 
 ### React - Frontend framework
 
+### Vite - Frontend buildtool 
+
 ### CSS - Styling
 
 

@@ -75,3 +75,9 @@ Provides the structure of your application.
 ### CSS: 
 
 Provides the styling for your application.
+
+## Vite:
+
+## Our main build tool for the frontend of the project.
+
+

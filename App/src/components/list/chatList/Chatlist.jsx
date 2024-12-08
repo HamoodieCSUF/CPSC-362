@@ -5,6 +5,7 @@ import { useUserStore } from "../../../lib/userStore";
 import { doc, getDoc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from "../../../lib/firebase";
 import { useChatStore } from "../../../lib/chatStore";
+import React from 'react';
 
 const ChatList = () => {
   const [chats, setChats] = useState([]);
@@ -36,7 +37,9 @@ const ChatList = () => {
     );
 
     return () => {
-      unSub();
+      if (typeof unSub === 'function') {
+        unSub();
+      }
     };
   }, [currentUser.id]);
 
